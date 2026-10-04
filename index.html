@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dicrart</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap" rel="stylesheet" />
+  <!-- Iconos de Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" />
+</head>
+<!-- Este es un comentario -->
+
+<body>
+  <section class="header" id="inicio">
+    <nav class="nav">
+      <a href="index.html" aria-label="Dicrart, inicio"><img src="img/logo-sin-fondo.png" alt="Logo de Dicrart" /></a>
+      <div class="nav-links" id="nav-links">
+        <button class="nav-toggle nav-close" type="button" aria-label="Cerrar menú" aria-controls="nav-links"
+          onclick="hideMenu()">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="acerca-de.html">Acerca de</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <button class="nav-toggle nav-open" type="button" aria-label="Abrir menú" aria-controls="nav-links"
+        aria-expanded="false" onclick="showMenu()">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+    </nav>
+    <div class="text-box">
+      <h1>Corporación Dicrart</h1>
+      <p>Talentos sin límites</p>
+      <a href="mas-informacion.html" class="hero-btn">Más información</a>
+    </div>
+  </section>
+  <!-- Cursos y programas -->
+  <section class="courses" id="programas">
+    <h1>Programas</h1>
+    <p>Descubre nuestros programas de formación.</p>
+    <div class="row">
+      <div class="course-col">
+        <h3>Aerografia</h3>
+        <img src="/img/rust87-abstract-4974312_1920.jpg" alt="Imagen del programa 1">
+        </a>
+        <p>Descripción del programa 1.</p>
+      </div>
+      <div class="course-col">
+        <h3>Arte Plásticas</h3>
+        <img src="/img/logo-favicon.jpg" alt="Imagen del programa 2">
+        </a>
+        <p>Descripción del programa 2.</p>
+      </div>
+      <div class="course-col">
+        <h3>Diseño de modas</h3>
+        <img src="/img/pexels-cloth-1835894.jpg" alt="Imagen del programa 3">
+        </a>
+        <p>Descripción del programa 3.</p>
+      </div>
+    </div>
+  </section>
+  <!-- JavaScript  para el menú responsivo -->
+  <script>
+    const navLinks = document.getElementById("nav-links");
+    const menuButton = document.querySelector(".nav-open");
+
+    function showMenu() {
+      navLinks.classList.add("is-open");
+      menuButton.setAttribute("aria-expanded", "true");
+    }
+
+    function hideMenu() {
+      navLinks.classList.remove("is-open");
+      menuButton.setAttribute("aria-expanded", "false");
+    }
+  </script>
+</body>
+
+</html>
